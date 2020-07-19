@@ -86,7 +86,7 @@ if __name__ == "__main__" :
     #
     cancel_message_handler = MessageHandler(
         cancel_message_f,
-        filters=Filters.command(["CANCEL"]) 
+        filters=Filters.command("CANCEL") 
     )
     app.add_handler(cancel_message_handler)
     #
