@@ -69,13 +69,13 @@ if __name__ == "__main__" :
     #
     incoming_purge_message_handler = MessageHandler(
         incoming_purge_message_f,
-        filters=Filters.command([Commandi.PURGE]) & 
+        filters=Filters.command([Commandi.PURGE]) 
     )
     app.add_handler(incoming_purge_message_handler)
     #
     # incoming_youtube_dl_handler = MessageHandler(
     #     incoming_youtube_dl_f,
-    #     filters=Filters.command([Commandi.YTDL]) & 
+    #     filters=Filters.command([Commandi.YTDL])  
     # )
     # app.add_handler(incoming_youtube_dl_handler)
     #
@@ -134,19 +134,18 @@ if __name__ == "__main__" :
     #
     save_thumb_nail_handler = MessageHandler(
         save_thumb_nail
-        filters=Filters.command(["Savethumbnail@uploadinghb4allbot"]) 
+        filters=Filters.command(["Savethumbnail"]) 
     )
     app.add_handler(save_thumb_nail_handler)
     #
     clear_thumb_nail_handler = MessageHandler(
         clear_thumb_nail,
-        filters=Filters.command(["Clearthumbnail@uploadinghb4allbot"])
+        filters=Filters.command(["Clearthumbnail"])
     )
     app.add_handler(clear_thumb_nail_handler)
     # 
     incoming_message_handler = MessageHandler(
-        incoming_message_f,
-        filters=message_fliter & Filters.chat(chats=AUTH_CHANNEL)
+        incoming_message_f
     )
     app.add_handler(incoming_message_handler)
     #
