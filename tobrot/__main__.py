@@ -63,31 +63,31 @@ if __name__ == "__main__" :
     #
     # incoming_message_handler = MessageHandler(
     #     incoming_message_f,
-    #     filters=Filters.command([Commandi.LEECH]) & Filters.chat(chats=AUTH_CHANNEL)
+    #     filters=Filters.command([Commandi.LEECH]) & )
     # )
     # app.add_handler(incoming_message_handler)
     #
     incoming_purge_message_handler = MessageHandler(
         incoming_purge_message_f,
-        filters=Filters.command([Commandi.PURGE]) & Filters.chat(chats=AUTH_CHANNEL)
+        filters=Filters.command([Commandi.PURGE]) & 
     )
     app.add_handler(incoming_purge_message_handler)
     #
     # incoming_youtube_dl_handler = MessageHandler(
     #     incoming_youtube_dl_f,
-    #     filters=Filters.command([Commandi.YTDL]) & Filters.chat(chats=AUTH_CHANNEL)
+    #     filters=Filters.command([Commandi.YTDL]) & 
     # )
     # app.add_handler(incoming_youtube_dl_handler)
     #
     status_message_handler = MessageHandler(
         status_message_f,
-        filters=Filters.command(["STATUS@uploadinghb4allbot"]) & Filters.chat(chats=AUTH_CHANNEL)
+        filters=Filters.command(["STATUS@uploadinghb4allbot"]) 
     )
     app.add_handler(status_message_handler)
     #
     cancel_message_handler = MessageHandler(
         cancel_message_f,
-        filters=Filters.command(["CANCEL"]) & Filters.chat(chats=AUTH_CHANNEL)
+        filters=Filters.command(["CANCEL"]) 
     )
     app.add_handler(cancel_message_handler)
     #
@@ -133,14 +133,14 @@ if __name__ == "__main__" :
     app.add_handler(call_back_button_handler)
     #
     save_thumb_nail_handler = MessageHandler(
-        save_thumb_nail,
-        filters=Filters.command(["Savethumbnail@uploadinghb4allbot"]) & Filters.chat(chats=AUTH_CHANNEL)
+        save_thumb_nail
+        filters=Filters.command(["Savethumbnail@uploadinghb4allbot"]) 
     )
     app.add_handler(save_thumb_nail_handler)
     #
     clear_thumb_nail_handler = MessageHandler(
         clear_thumb_nail,
-        filters=Filters.command(["Clearthumbnail@uploadinghb4allbot"]) & Filters.chat(chats=AUTH_CHANNEL)
+        filters=Filters.command(["Clearthumbnail@uploadinghb4allbot"])
     )
     app.add_handler(clear_thumb_nail_handler)
     # 
