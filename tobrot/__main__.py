@@ -113,12 +113,8 @@ if __name__ == "__main__" :
         filters=Filters.command(["Help"]) 
     )
     app.add_handler(help_text_handler)
-    #
-    new_join_handler = MessageHandler(
-        new_join_f,
-        filters=~Filters.chat
-    )
-    app.add_handler(new_join_handler)
+   
+   
     #
     group_new_join_handler = MessageHandler(
         help_message_f,
