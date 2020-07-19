@@ -21,7 +21,6 @@ from tobrot.helper_funcs.create_compressed_archive import create_archive
 from tobrot import (
     ARIA_TWO_STARTED_PORT,
     MAX_TIME_TO_WAIT_FOR_TORRENTS_TO_START,
-    AUTH_CHANNEL,
     DOWNLOAD_LOCATION,
     EDIT_SLEEP_TIME_OUT,
     R_CLONE_CONF_URI
