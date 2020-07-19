@@ -41,7 +41,7 @@ from tobrot.plugins.custom_thumbnail import (
     clear_thumb_nail
 )
 from tobrot.helper_funcs.custom_filters import message_fliter
-from tobrot.dinmamoc import Commandi
+from tobrot.dinmamoc import Commandi filters=Filters.command(["CANCEL"])
 
 
 if __name__ == "__main__" :
@@ -116,13 +116,13 @@ if __name__ == "__main__" :
     #
     save_thumb_nail_handler = MessageHandler(
         save_thumb_nail,
-        filters=Filters.command(["SavethumbnailHB4all"]) 
+        filters=Filters.command(["Savethumbnail"]) 
     )
     app.add_handler(save_thumb_nail_handler)
     #
     clear_thumb_nail_handler = MessageHandler(
         clear_thumb_nail,
-        filters=Filters.command(["ClearthumbnailHB4All"])
+        filters=Filters.command(["Clearthumbnail"])
     )
     app.add_handler(clear_thumb_nail_handler)
     # 
