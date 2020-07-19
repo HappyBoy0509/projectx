@@ -81,7 +81,7 @@ if __name__ == "__main__" :
     #
     status_message_handler = MessageHandler(
         status_message_f,
-        filters=Filters.command(["STATUS@uploadinghb4allbot"]) 
+        filters=Filters.command(["Status"]) 
     )
     app.add_handler(status_message_handler)
     #
@@ -111,7 +111,7 @@ if __name__ == "__main__" :
 
     help_text_handler = MessageHandler(
         help_message_f,
-        filters=Filters.command(["Help@uploadinghb4allbot"]) & Filters.chat(chats=AUTH_CHANNEL)
+        filters=Filters.command(["Help"]) 
     )
     app.add_handler(help_text_handler)
     #
@@ -133,7 +133,7 @@ if __name__ == "__main__" :
     app.add_handler(call_back_button_handler)
     #
     save_thumb_nail_handler = MessageHandler(
-        save_thumb_nail
+        save_thumb_nail,
         filters=Filters.command(["Savethumbnail"]) 
     )
     app.add_handler(save_thumb_nail_handler)
