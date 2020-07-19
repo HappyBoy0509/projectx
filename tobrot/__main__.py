@@ -99,13 +99,13 @@ if __name__ == "__main__" :
     #
     rename_message_handler = MessageHandler(
         rename_message_f,
-        filters=Filters.command([Commandi.RENAME]) & Filters.chat(chats=AUTH_CHANNEL)
+        filters=Filters.command([Commandi.RENAME]) 
     )
     app.add_handler(rename_message_handler)
     #
     upload_document_handler = MessageHandler(
         upload_document_f,
-        filters=Filters.command([Commandi.UPLOAD]) & Filters.chat(chats=AUTH_CHANNEL)
+        filters=Filters.command([Commandi.UPLOAD]) 
     )
     app.add_handler(upload_document_handler)
 
@@ -117,13 +117,13 @@ if __name__ == "__main__" :
     #
     new_join_handler = MessageHandler(
         new_join_f,
-        filters=~Filters.chat(chats=AUTH_CHANNEL)
+        filters=~Filters.chat
     )
     app.add_handler(new_join_handler)
     #
     group_new_join_handler = MessageHandler(
         help_message_f,
-        filters=Filters.chat(chats=AUTH_CHANNEL) & Filters.new_chat_members
+        filters=Filters.chat & Filters.new_chat_members
     )
     app.add_handler(group_new_join_handler)
     #
