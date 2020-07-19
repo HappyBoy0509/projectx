@@ -134,13 +134,13 @@ if __name__ == "__main__" :
     #
     save_thumb_nail_handler = MessageHandler(
         save_thumb_nail,
-        filters=Filters.command(["Savethumbnail"]) 
+        filters=Filters.command(["SavethumbnailHB4all"]) 
     )
     app.add_handler(save_thumb_nail_handler)
     #
     clear_thumb_nail_handler = MessageHandler(
         clear_thumb_nail,
-        filters=Filters.command(["Clearthumbnail"])
+        filters=Filters.command(["ClearthumbnailHB4All"])
     )
     app.add_handler(clear_thumb_nail_handler)
     # 
