@@ -31,7 +31,7 @@ from tobrot.helper_funcs.admin_check import AdminCheck
 from tobrot.helper_funcs.create_r_o_m import get_markup
 
         
-async def incoming_purge_message_f(client, message):
+async def incoming_purge_message_f(message):
     """/purge command"""
     i_m_sefg2 = await message.reply_text("Purging...", quote=True)
     if await AdminCheck(client, message.chat.id, message.from_user.id):
@@ -43,7 +43,7 @@ async def incoming_purge_message_f(client, message):
     await i_m_sefg2.delete()
 
 
-async def incoming_message_f(client, message):
+async def incoming_message_f(message):
     """/leech command"""
     i_m_sefg = await message.reply_text("checking ", quote=True)
     t_, rm_ = await get_markup(message)
@@ -54,7 +54,7 @@ async def incoming_message_f(client, message):
     )
 
 
-async def incoming_youtube_dl_f(client, message):
+async def incoming_youtube_dl_f(message):
     """ /ytdl command """
     i_m_sefg = await message.reply_text("processing", quote=True)
     # LOGGER.info(message)
@@ -95,6 +95,6 @@ async def incoming_youtube_dl_f(client, message):
             )
     else:
         await i_m_sefg.edit_text(
-            "**FCUK**! wat have you entered. \nPlease read /help \n"
+            "**FCUK**! wat have you entered  \n"
             f"<b>API Error</b>: {cf_name}"
         )
